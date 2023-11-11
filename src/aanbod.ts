@@ -2,6 +2,9 @@ import { gsap } from 'gsap';
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
+  const currentNavItem = document.getElementById('aanbod');
+  currentNavItem?.classList.add('w-current');
+
   // Modal
   const modal = document.querySelector('[cs-el="modal"]');
   if (modal) {

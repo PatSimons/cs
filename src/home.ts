@@ -1,7 +1,7 @@
-import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// import { gsap } from 'gsap';
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
-window.Webflow ||= [];
-window.Webflow.push(() => {}); // End: Webflow Push
+//window.Webflow ||= [];
+//window.Webflow.push(() => {}); // End: Webflow Push

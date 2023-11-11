@@ -1,7 +1,6 @@
 import { gsap } from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
-
-gsap.registerPlugin(ScrollTrigger);
+// import { ScrollTrigger } from 'gsap/ScrollTrigger';
+// gsap.registerPlugin(ScrollTrigger);
 
 window.Webflow ||= [];
 window.Webflow.push(() => {
@@ -44,11 +43,10 @@ window.Webflow.push(() => {
             cards.forEach((item: any) => {
               const overlay = item.querySelector('[cs-el="cardContent"]');
               const icon = item.querySelector('[cs-el="cardIcon"]');
-              gsap.set(overlay, { yPercent: 101 });
               const tl_hover = gsap.timeline({ paused: true });
 
               tl_hover.to(item, { scale: 1.05, duration: 0.5, ease: 'sin.in' });
-              tl_hover.to(overlay, { yPercent: 0, duration: 0.5, ease: 'sin.in' }, '<');
+              tl_hover.to(overlay, { y: '0%', duration: 0.5, ease: 'sin.in' }, '<');
               tl_hover.from(icon, { opacity: 0, x: '-32px', duration: 0.5, ease: 'sin.in' });
 
               item.addEventListener('mouseenter', () => {
