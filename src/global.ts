@@ -1,4 +1,5 @@
 import { gsap } from 'gsap';
+export { gsap };
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // gsap.registerPlugin(ScrollTrigger);
 
