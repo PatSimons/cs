@@ -31,8 +31,8 @@ window.Webflow.push(() => {
         const cardsContainer = document.querySelector('[cs-el="cards"]');
         if (cardsContainer) {
           const cards: string[] = gsap.utils.toArray('[cs-el="card"]');
+
           if (cards.length > 0) {
-            console.log(cards.length);
             // ScrollTrigger.batch(cards, {
             //   onEnter: (batch) =>
             //     gsap.from(batch, { y: '8px', opacity: 0, duration: 1, stagger: 0.1 }),
@@ -42,6 +42,7 @@ window.Webflow.push(() => {
             // Card Hovers
             cards.forEach((item: any) => {
               const overlay = item.querySelector('[cs-el="cardContent"]');
+              gsap.set(overlay, { y: '101%' });
               const icon = item.querySelector('[cs-el="cardIcon"]');
               const tl_hover = gsap.timeline({ paused: true });
 

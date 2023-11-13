@@ -2,12 +2,12 @@ import * as esbuild from 'esbuild';
 import { readdirSync } from 'fs';
 import { join, sep } from 'path';
 
-// Config output
+//// Config output
 const BUILD_DIRECTORY = 'dist';
 const PRODUCTION = process.env.NODE_ENV === 'production';
 
 // Config entrypoint files
-const ENTRY_POINTS = ['src/global.ts', 'src/home.ts', 'src/blog.ts', 'src/aanbod.ts'];
+const ENTRY_POINTS = ['src/home.ts', 'src/blog.ts', 'src/aanbod.ts'];
 
 // Config dev serving
 const LIVE_RELOAD = !PRODUCTION;

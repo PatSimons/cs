@@ -1,5 +1,6 @@
-import { gsap } from 'gsap';
+import './global';
 
+import { gsap } from 'gsap';
 window.Webflow ||= [];
 window.Webflow.push(() => {
   const currentNavItem = document.getElementById('aanbod');
