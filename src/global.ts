@@ -1,5 +1,8 @@
 import { gsap } from 'gsap';
 export { gsap };
+
+import { initSliders } from 'src/components/sliders';
+
 // import { ScrollTrigger } from 'gsap/ScrollTrigger';
 // gsap.registerPlugin(ScrollTrigger);
 
@@ -73,4 +76,6 @@ window.Webflow.push(() => {
       return () => {};
     } // End: MM Context
   ); // End: Setup Match Media
+
+  initSliders();
 }); // End: Webflow Push
