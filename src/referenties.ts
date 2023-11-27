@@ -35,12 +35,17 @@ window.Webflow.push(() => {
 
   // const divToExport = document.querySelector<HTMLElement>('[cs-el="ogex"]');
   // if (divToExport) {
+  //   const name = divToExport.getAttribute('slug');
   //   const width = divToExport.clientWidth;
   //   const height = divToExport.clientHeight;
   //   // Use html2canvas to capture the content of the div
-  //   html2canvas(divToExport).then((canvas) => {
+  //   html2canvas(divToExport, {
+  //     width: 1200,
+  //     height: 630,
+  //     scale: 1,
+  //   }).then((canvas) => {
   //     // Convert canvas to base64 image
-  //     const imageData = canvas.toDataURL('image/png');
+  //     const imageData = canvas.toDataURL('image/webp', 0.3);
   //     // Create an image element
   //     const img = document.createElement('img');
   //     img.src = imageData;
@@ -52,9 +57,10 @@ window.Webflow.push(() => {
   //       // Create an anchor element to trigger the download
   //       const link = document.createElement('a');
   //       link.href = imageData; // Set the base64 data as the href
-  //       link.download = 'consultative_selling_' + name + '_og.png'; // Set the download filename
+  //       link.download = 'consultative_selling_' + name + '_og.webp'; // Set the download filename
   //       link.click(); // Simulate a click on the link to trigger the download
   //     });
+  //     img.click();
   //   });
-  // }
+  //}
 });

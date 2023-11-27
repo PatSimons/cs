@@ -1,5 +1,7 @@
 import './global';
 
+import { convertDatesToDutchFormat } from '$utils/dutchdates';
+
 import { gsap } from './global';
 
 window.Webflow ||= [];
@@ -33,4 +35,9 @@ window.Webflow.push(() => {
       });
     }
   }
+
+  // Dates to Dutch
+  if (document.querySelector('[cs-el="date"]')) {
+    convertDatesToDutchFormat('[cs-el="date"]');
+  } // End: Dates to Dutch
 }); // End: Webflow Push
