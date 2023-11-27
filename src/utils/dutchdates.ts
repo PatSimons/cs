@@ -21,8 +21,8 @@ function formatDateToDutch(dateText: string): string {
 
   // Assuming the input format is Month D, Yr
   const month = dateParts[0];
-  const day = dateParts[1].slice(0, -1);
-  const year = dateParts[2];
+  //const day = dateParts[1].slice(0, -1);
+  //const year = dateParts[2];
 
   const monthIndex = getMonthIndex(month);
 
@@ -31,7 +31,7 @@ function formatDateToDutch(dateText: string): string {
     return dateText;
   }
 
-  const formattedDate = `${day} ${getMonthInDutch(monthIndex)}, ${year}`;
+  const formattedDate = `${getMonthInDutch(monthIndex)}`;
   return formattedDate;
 }
 
