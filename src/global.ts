@@ -15,7 +15,13 @@ window.Webflow.push(() => {
     gsap.to(consent, { opacity: 1, delay: 1, yPercent: 0 });
     const closeConsent = consent.querySelector('[cs-el="closeConsent"]');
     closeConsent?.addEventListener('click', () => {
-      gsap.to(consent, { opacity: 0, yPercent: 200 });
+      gsap.to(consent, {
+        opacity: 0,
+        yPercent: 200,
+        onComplete: () => {
+          consent.remove();
+        },
+      });
     });
   }
   //// Setup Match Media
