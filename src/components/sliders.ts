@@ -168,7 +168,13 @@ function initSlider(slider: HTMLElement) {
   }
   // Play Slider
   function playSlider() {
-    isPlaying = setInterval(() => slideAction('next'), playDuration);
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'hidden') {
+        clearInterval(isPlaying); // Stop the interval
+      } else {
+        isPlaying = setInterval(() => slideAction('next'), playDuration);
+      }
+    });
   }
   // Stop Slider
   function stopSlider(ap: number | undefined) {
