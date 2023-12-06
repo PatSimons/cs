@@ -483,6 +483,17 @@ function initSlider(slider: HTMLElement) {
   } else {
     setCover(cover);
   }
+
+  // Add visibility listeners
+  document.addEventListener('visibilitychange', () => {
+    const doc_visibility = document.visibilityState;
+    console.log(doc_visibility);
+    if (doc_visibility === 'hidden' && isPlaying) {
+      clearInterval(isPlaying);
+    } else if (doc_visibility === 'visible') {
+      playSlider();
+    }
+  });
 } // End: initSlider
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

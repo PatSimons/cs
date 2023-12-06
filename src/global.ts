@@ -80,14 +80,6 @@ window.Webflow.push(() => {
         init();
       });
 
-      // Add visibility listeners
-      document.addEventListener('visibilitychange', () => {
-        const doc_visibility = document.visibilityState;
-        console.log(doc_visibility);
-        if (doc_visibility === 'hidden') {
-        }
-      });
-
       return () => {};
     } // End: MM Context
   ); // End: Setup Match Media
