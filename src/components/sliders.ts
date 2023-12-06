@@ -487,11 +487,14 @@ function initSlider(slider: HTMLElement) {
   // Add visibility listeners
   document.addEventListener('visibilitychange', () => {
     const doc_visibility = document.visibilityState;
-    console.log(doc_visibility);
+    //console.log(doc_visibility);
+    //console.log(isPlaying);
     if (doc_visibility === 'hidden' && isPlaying) {
       clearInterval(isPlaying);
+      //console.log('stopped');
     } else if (doc_visibility === 'visible') {
       playSlider();
+      //console.log('play');
     }
   });
 } // End: initSlider
